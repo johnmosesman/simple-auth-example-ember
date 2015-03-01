@@ -43,5 +43,15 @@ module.exports = function(environment) {
 
   }
 
+  ENV['simple-auth'] = {
+    authorizer: 'simple-auth-authorizer:devise'
+  };
+
+  ENV['simple-auth-devise'] = {
+    // resourceName: 'user',
+    // tokenAttributeName: 'token',
+    identificationAttributeName: 'email'
+  };
+
   return ENV;
 };
